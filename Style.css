@@ -57,6 +57,16 @@ P{
 }
 
 
+.colum-coffeetype-text{
+display: flex;
+justify-content: center;
+align-content: center;
+padding: 20px;
+
+}
+
+
+
 #hero-beans{
     background-image: url("img/beans.jpg");
     background-attachment: fixed;
