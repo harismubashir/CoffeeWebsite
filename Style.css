@@ -33,6 +33,27 @@ P{
     
 }
 
+.standard-margin-section{
+    max-width: 960px;
+    padding-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+     
+}
+#wrapper-coffeetype{
+    display: flex;
+    
+}
+
+.column-coffeetype{
+    max-width: 30%;
+    background-color: #ffffff;
+}
+
+.center{
+}
+
+
 #hero-beans{
     background-image: url("img/beans.jpg");
     background-attachment: fixed;
