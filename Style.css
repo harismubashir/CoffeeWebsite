@@ -141,7 +141,8 @@ p{
 display: flex;
 justify-content: center;
 align-content: center;
-padding: 20px;
+padding-top: 20px;
+padding-left:30px;
 
 }
 
@@ -186,4 +187,58 @@ padding: 20px;
     grid-column: 3/4;
     grid-row: 2/3;
     padding: 35px;
+}
+
+#letstalkwrapper{
+margin-top: 200px;
+margin-bottom: 150px;
+display: flex;
+border: none;
+background-color: lightgrey;
+
+}
+
+#letstalkimg{
+    background-image: url("img/coffee_talk.jpg");
+    width: 49%;
+    height:70vh;
+    justify-content: center;
+    background-size: cover;
+
+    
+
+}
+
+#lets{
+    font-size: 150px;
+    padding: 10px;
+    text-align: center;
+    color:white;
+}
+
+
+.formletstalk{
+
+justify-content: center;
+margin-left: 40px;
+margin-top: 40px;
+
+}
+
+input{
+    margin-top: 40px;
+    width:550px;
+    font-size: large;
+    height: 50px;
+    border: none;
+    background-color: #f7f7f7;
+}
+input[type=submit]{
+    background-color: brown;
+    color: white;
+    width:50%;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top:25px;
+    padding-bottom: 25px;
 }
