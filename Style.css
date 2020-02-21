@@ -1,5 +1,6 @@
 body{
     font-family: 'Avenir', sans-serif;
+       
 }
 
 h1{
@@ -108,7 +109,7 @@ p{
     padding-top: 200px;
     margin-left: auto;
     margin-right: auto;
-    
+    background-color: white;    
 
      
 }
@@ -194,7 +195,7 @@ margin-top: 200px;
 margin-bottom: 150px;
 display: flex;
 border: none;
-background-color: lightgrey;
+background-color: lightgray
 
 }
 
@@ -214,14 +215,18 @@ background-color: lightgrey;
     padding: 10px;
     text-align: center;
     color:white;
+
 }
 
 
 .formletstalk{
-
+background-color:white;
+width: 46%;
 justify-content: center;
+padding-left:40px;
 margin-left: 40px;
 margin-top: 40px;
+margin-bottom: 40px;
 
 }
 
@@ -234,11 +239,53 @@ input{
     background-color: #f7f7f7;
 }
 input[type=submit]{
-    background-color: brown;
+    text-color: black;
     color: white;
-    width:50%;
+    width:180px;
     padding-left: 25px;
     padding-right: 25px;
     padding-top:25px;
     padding-bottom: 25px;
+    
+}
+
+input[type:submit]:hover]{
+    transform: scale(1.2);s
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+#wrapperfooter{
+    margin-top: 200px;
+
+
+}
+
+.footer{
+    padding-top:0px;
+    display: flex;
+    margin-left: 200px;
+    margin-left: 200px;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+
+
+#footertext{
+    font-size: 50px;
+    font-weight: bold;
+}
+.footerlink{
+
+    margin-left: 15px;
+
+}
+.wrappercopyright{
+   
+    background-color: lightgray;
+
+}
+
+.copyright-text{
+    width:100%;
+    text-align: center;
 }
