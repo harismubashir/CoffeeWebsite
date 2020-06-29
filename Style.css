@@ -256,9 +256,13 @@ background-color: lightgray
 #letstalkimg{
     background-image: url("img/coffee_talk.jpg");
     width: 49%;
-    height:70vh;
+    margin-right:15px;
     justify-content: center;
     background-size: cover;
+    background-position: center;
+    align-items: center;
+
+    display: flex;
 
     
 
@@ -285,10 +289,18 @@ margin-bottom: 40px;
 
 }
 
-input{
+input, textarea{
+    margin-top: 25px;
+    padding-left:15px;
+   
+    font-size: 20px;
+}
+
+input[type=text], textarea{
     margin-top: 40px;
-    width:40vw;
+    width:75%;
     font-size: large;
+    font-weight: 100;
     height: 50px;
     border: none;
     background-color: #f7f7f7;
