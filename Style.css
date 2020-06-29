@@ -64,10 +64,10 @@ h1{
     }
 }
 
-p{
+#sub-title{
 
    font-size: 1em;
-   width: 100%;
+   width: 44%;
     text-align: right;
 }
 
@@ -201,8 +201,7 @@ p{
 display: flex;
 justify-content: center;
 align-content: center;
-padding-top: 20px;
-padding-left:30px;
+padding: 50px;
 
 }
 
@@ -480,6 +479,15 @@ input[type=submit]:hover {
     .cap-text{
         grid-column: 1/2;
         grid-row: 4/5;
+    }
+
+    .latte{
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .latte-text{
+        grid-column: 1/2;
+        grid-row: 5/6;
     }
 
     #letstalkwrapper{
