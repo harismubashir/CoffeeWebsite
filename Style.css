@@ -201,7 +201,7 @@ h1{
 display: flex;
 justify-content: center;
 align-content: center;
-padding: 50px;
+padding: 70px;
 
 }
 
@@ -214,8 +214,6 @@ padding: 50px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: minmax(350px, auto);
     grid-gap: 20px;
-
-    padding-bottom:200px;
 
 }
 
