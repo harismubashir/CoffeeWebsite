@@ -22,8 +22,43 @@ function todaysPrice(e){
 
 //getPRICE();
 
+//submitting info to email via zapier
 
+let submit = document.getElementById("submit");
+let name = document.getElementById("name");
+let email = document.getElementById("email");
+let message = document.getElementById("message");
+let alert = document.getElementById("alert");
 
+submit.addEventListener("click",submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+    validate(name.value, email.value, message.value);
+
+}
+
+function validate(name,email,message) {
+        if (name== "" || email== "" || message== ""){
+            alert.innerHTML = "Please complete all fields to submit form.";
+        }else{
+
+            emailUrl = "https://hooks.zapier.com/hooks/catch/5963107/o9gm325";
+            let emailObj = {
+                name: name,
+                email: email,
+                messsage: message,
+                to: "harismubashir@gmail.com"
+            };
+            let emailRequest = new XMLHttpRequest();
+            emailRequest.open("POST", emailUrl);
+            emailRequest.send(JSON.stringify(emailObj));
+        }
+
+    
+}
+
+//Return to top code
 let toTopButton = document.getElementById("jumptotop");
 toTopButton.addEventListener("click", goToTop);
 
