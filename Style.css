@@ -52,6 +52,13 @@ h1{
     animation-fill-mode: forwards;
 }
 
+#cp{
+    color:hsl(0, 0%, 0%);
+    font-size: large;
+    padding-right: 50px;
+
+}
+
 @keyframes slideup{
     0%{
         transform: translate(0,50px);
