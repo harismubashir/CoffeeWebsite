@@ -1,22 +1,13 @@
-console.log("message","hello","hi");
-let firstName = "Haris";
-let lastName = "Mubashir";
-console.log(firstName,lastName);
 
-let mySkills = ["excel","analysis", "management"]
+const api_url= "https://api.tradingeconomics.com/markets/search/coffee?c=guest:guest&f=json";
 
-mySkills[0]="Handsome";
-mySkills[3]="excel";
+async function getPRICE()
+{
+    const response = await fetch(api_url);
+    const price = await response.json();
+    console.log(price[0]);
+    document.getElementById('cp').textContent = price;
 
-
-let name = {
-    first: firstName,
-    last: lastName,
-    age: 50,
-    skills: mySkills
 }
 
-name.property="Hari";
-name.skills[4]="Communication";
-    
-console.log(name);
+getPRICE();
