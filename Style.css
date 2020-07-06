@@ -51,11 +51,21 @@ h1{
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+#price-wrapper{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 470px;
+    width: 50%;
+    z-index: 3;
+    padding-left: 10px;
+
+}
 
 #cp{
     color:hsl(0, 0%, 0%);
     font-size: large;
-    padding-right: 50px;
 
 }
 
@@ -74,8 +84,9 @@ h1{
 #sub-title{
 
    font-size: 1em;
-   width: 44%;
-    text-align: right;
+   width: 48%;
+   text-align: right;
+   padding-left: 0px;
 }
 
 #hero-section{
