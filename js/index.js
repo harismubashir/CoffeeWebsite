@@ -6,6 +6,13 @@ function pageLoad() {
     priceRequest.addEventListener("load", showPrice);
     priceRequest.open("GET", api_url);
     priceRequest.send();
+
+    //Return to top code
+    let toTopButton = document.getElementById("jumptotop");
+    toTopButton.addEventListener("click", goToTop);
+
+    //submit form
+    submit.addEventListener("click", submitForm);
 }
 
 function showPrice(e) {
@@ -28,7 +35,7 @@ let email = document.getElementById("email");
 let message = document.getElementById("message");
 let alert = document.getElementById("alert");
 
-submit.addEventListener("click", submitForm);
+
 
 function submitForm(e) {
     e.preventDefault();
@@ -62,9 +69,7 @@ function validate(name, email, message) {
     }
 }
 
-//Return to top code
-let toTopButton = document.getElementById("jumptotop");
-toTopButton.addEventListener("click", goToTop);
+
 
 function goToTop() {
     window.scrollTo(0, 0);
