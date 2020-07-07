@@ -13,6 +13,9 @@ function pageLoad() {
 
     //submit form
     submit.addEventListener("click", submitForm);
+
+    //appear go to top button on scroll
+    window.addEventListener('scroll', appear);
 }
 
 function showPrice(e) {
@@ -73,4 +76,14 @@ function validate(name, email, message) {
 
 function goToTop() {
     window.scrollTo(0, 0);
+}
+
+
+
+function appear(){
+    if (window.scrollY > 400) {
+        toTopButton.style.display = "block";
+    }else{
+        toTopButton.style.display = "none";
+    } 
 }

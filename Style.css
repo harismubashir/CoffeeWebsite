@@ -140,7 +140,7 @@ h1{
     position: absolute; 
     z-index: 5;
     top: 0px;
-    width: 100vw;
+    /*width: 100vw;*/
 
     display: flex;
     flex-direction: row;
@@ -315,24 +315,26 @@ input, textarea{
 }
 
 #message {
+    padding-top: 15px;
     height: 140px;
 }
 
 input[type=text], textarea{
     height: 50px;
     width:85%;
-    font-size: large;
-    font-weight: 40;
+    font-size: 20px;
     border: none;
     background-color: #f7f7f7;
 }
 input[type=submit]{
     
     color: black;
-    width:180px;
+    width:160px;
+    height: 60px;
+    font-size: 20px;
     padding-left: 25px;
     padding-right: 25px;
-    padding-top:25px;
+    padding-top:18px;
     padding-bottom: 25px;
     
 }
@@ -376,7 +378,22 @@ input[type=submit]:hover {
 
 .copyright-text{
     width:100%;
-    text-align: center;
+    text-align: right;
+}
+
+#jumptotop{
+    background: none;
+    box-shadow: none;
+    border: none;
+    width: 75px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+#topbuttonimg{
+    width: 100%;
 }
 
 #dropdown{
