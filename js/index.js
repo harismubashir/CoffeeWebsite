@@ -7,6 +7,14 @@ function pageLoad() {
     priceRequest.open("GET", api_url);
     priceRequest.send();
 
+    //submitting info to email via zapier
+
+    let submit = document.getElementById("submit");
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let message = document.getElementById("message");
+    let alert = document.getElementById("alert");
+
     //Return to top code
     let toTopButton = document.getElementById("jumptotop");
     toTopButton.addEventListener("click", goToTop);
@@ -19,7 +27,9 @@ function pageLoad() {
 
 
     //action menu items
-    document.addEventListener()
+    let home = document.getElementById("menu-home");
+
+    home.addEventListener("click",actionMenu);
 }
 
 function showPrice(e) {
@@ -32,29 +42,20 @@ function showPrice(e) {
 }
 
 
+//action click
+function actionMenu(){
+    console.log("click");
+    href = "//www.google.com";
+}
+
 //getPRICE();
 
-//submitting info to email via zapier
 
-let submit = document.getElementById("submit");
-let name = document.getElementById("name");
-let email = document.getElementById("email");
-let message = document.getElementById("message");
-let alert = document.getElementById("alert");
 
 
 
 function submitForm(e) {
     e.preventDefault();
-    /*
-    if(validate(...)) {
-        sendEmail(...);
-    } else {
-        showError(...)
-    }
-
-    Add code to cleanup forms and send update message of "sent"
-    */
     validate(name.value, email.value, message.value);
 }
 

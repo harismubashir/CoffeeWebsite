@@ -334,7 +334,7 @@ input[type=submit]{
     font-size: 20px;
     padding-left: 25px;
     padding-right: 25px;
-    padding-top:18px;
+    padding-top:20px;
     padding-bottom: 25px;
     
 }
@@ -361,6 +361,7 @@ text-align: center;
     width: 100%;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 15px;
     
 }
 
