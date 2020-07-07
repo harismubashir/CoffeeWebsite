@@ -16,6 +16,10 @@ function pageLoad() {
 
     //appear go to top button on scroll
     window.addEventListener('scroll', appear);
+
+
+    //action menu items
+    document.addEventListener()
 }
 
 function showPrice(e) {
@@ -56,21 +60,38 @@ function submitForm(e) {
 
 function validate(name, email, message) {
     if (name == "" || email == "" || message == "") {
-        alert.innerHTML = "Please complete all fields to submit form.";
+            showError();
     } else {
 
-        emailUrl = "https://hooks.zapier.com/hooks/catch/5963107/o9gm325";
-        let emailObj = {
-            name: name,
-            email: email,
-            messsage: message,
-            to: "harismubashir@gmail.com"
-        };
-        let emailRequest = new XMLHttpRequest();
-        emailRequest.open("POST", emailUrl);
-        emailRequest.send(JSON.stringify(emailObj));
+            sendEmail();
+;
     }
 }
+
+function showError() {
+    alert.innerHTML = "Please complete all fields to submit form.";
+}
+
+function sendEmail() {
+    let emailUrl = "https://hooks.zapier.com/hooks/catch/5963107/o9gm325";
+    let emailObj = {
+        name: name,
+        email: email,
+        messsage: message,
+        to: "harismubashir@gmail.com"
+
+    }
+
+    let emailRequest = new XMLHttpRequest();
+    emailRequest.open("POST", emailUrl);
+    emailRequest.send(JSON.stringify(emailObj));
+
+    alert.innerHTML = "Sent"
+    name.value= "";
+    email.value="";
+    message.value="";
+}
+
 
 
 
