@@ -1,4 +1,7 @@
 window.addEventListener('load', pageLoad);
+
+let toTopButton;
+
 // page load to give time for html to load before jscript
 function pageLoad() {
     const api_url = "https://api.tradingeconomics.com/markets/search/coffee?c=guest:guest&f=json";
@@ -13,10 +16,10 @@ function pageLoad() {
     let name = document.getElementById("name");
     let email = document.getElementById("email");
     let message = document.getElementById("message");
-    let alert = document.getElementById("alert");
+    alert = document.getElementById("alert");
 
     //Return to top code
-    let toTopButton = document.getElementById("jumptotop");
+    toTopButton = document.getElementById("jumptotop");
     toTopButton.addEventListener("click", goToTop);
 
     //submit form
@@ -27,49 +30,44 @@ function pageLoad() {
 
 
     //action menu items
-    let home = document.getElementById("menu-home");
+    //let home = document.getElementById("menu-home");
 
-    home.addEventListener("click",actionMenu);
+    //home.addEventListener("click",actionMenu);
 }
 
 function showPrice(e) {
     e.preventDefault();
-    console.log("$" + JSON.parse(e.target.response)[0].Last);
-    console.log(typeof e.target.response);
     let myarray = JSON.parse(e.target.response);
     document.getElementById('cp').innerHTML = "$" + JSON.parse(e.target.response)[0].Last;
 
 }
 
 
-//action click
+/*action click
 function actionMenu(){
     console.log("click");
     href = "//www.google.com";
 }
-
-//getPRICE();
-
-
-
-
-
+*/
 function submitForm(e) {
     e.preventDefault();
-    validate(name.value, email.value, message.value);
+    if(validate()) {
+        sendEmail();
+    } else {
+        showError();
+    }
 }
 
-function validate(name, email, message) {
-    if (name == "" || email == "" || message == "") {
-            showError();
+function validate() {
+    if (name.value == "" || email.value == "" || message.value == "") {
+        return false;
     } else {
-
-            sendEmail();
-;
+        return true;
     }
 }
 
 function showError() {
+    let alert = document.getElementById("alert");
     alert.innerHTML = "Please complete all fields to submit form.";
 }
 
@@ -87,6 +85,7 @@ function sendEmail() {
     emailRequest.open("POST", emailUrl);
     emailRequest.send(JSON.stringify(emailObj));
 
+    let alert = document.getElementById("alert");
     alert.innerHTML = "Sent"
     name.value= "";
     email.value="";
@@ -100,9 +99,8 @@ function goToTop() {
     window.scrollTo(0, 0);
 }
 
-
-
-function appear(){
+function appear(e){
+    console.log(e);
     if (window.scrollY > 400) {
         toTopButton.style.display = "block";
     }else{
