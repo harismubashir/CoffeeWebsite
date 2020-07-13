@@ -369,13 +369,16 @@ input[type=submit]:hover {
 text-align: center;
 }
 
-#wrapperfooter{
+.wrapperfooter{
+    margin:0px;
     margin-top: 300px;
+    align-items: center;
 
 
 }
 
 .footer{
+    margin:0px;
     padding-top:0px;
     display: flex;
     align-items: center;
@@ -383,29 +386,39 @@ text-align: center;
     justify-content: space-between;
     align-items: flex-end;
     padding: 15px;
+    margin-right:0px;
     
 }
 
 
 #footertext{
     font-size: 50px;
-    font-weight: bold;
+    
+    /*font-weight: bold;*/
+    font-family: 'Times New Roman', Times, serif;
+    margin:0px;
 
 }
 .footerlink{
 
     margin-left: 15px;
+    margin-top:0px;
 
 }
 .wrappercopyright{
    
-    background-color: lightgray;
+    background-color: #f7f7f7;
 
 }
 
 .copyright-text{
+    margin-top:0px;
+    padding-top:10px;
+    margin:0;
+    font-size: 12px;
+    background-color: #f7f7f7;
     width:95%;
-    text-align: right;
+    text-align: center;
 }
 
 #jumptotop{
