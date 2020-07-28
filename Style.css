@@ -250,7 +250,7 @@ padding: 70px;
 }
 
 
-#explicit-coffee-grid{
+.coffee-grid{
 
     margin-top:100px;
 
@@ -464,25 +464,36 @@ text-align: center;
     }
     #dropdown{
 
-        display: block;
+        display: flex;
+        flex-direction: column;
         padding: 25px;
+        max-width: 50px;
 
     
+    }
+    a{
+       
+        font-weight: bold;
     }
     
     #dropbutton{
         background-image: url(img/drop_down.svg);
         background-repeat: none;
         background-size: cover;
+        align-content: left;
         height: 30px;
         width: 30px;
     }
 
     #droplist{
-        display: flex;
-        flex-direction: column;
-        min-width: 160px;
         display: none;
+        flex-direction: column;
+        position: absolute;
+        margin-top:30px;
+        right: 0px;
+        width: 70px;
+
+        background-color:lightgrey;
     }
 
 
@@ -534,11 +545,13 @@ text-align: center;
     }
     
     #price-wrapper{
-
+        position: absolute;
+        margin-top:200px;
+        
+       
         align-content: center;
         padding: 2em;
         text-align: center;
-        margin-top: 5em;
         margin-left: auto;
         margin-right:auto;
         text-align: center;
@@ -554,39 +567,42 @@ text-align: center;
 
     .wrapper-coffeetype{
         min-width: 800px;
-        flex-direction: column-reverse;
+        flex-direction: column;
         flex-wrap: wrap;
+        display: block;
      
     }
 
     .center{
-        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-left:0px;
 
     }
 
-    #explicit-coffee-grid{
+    .coffee-grid {
 
         grid-template-columns: 1fr;
 
     }
 
-    .espre {
+    .cap{
         grid-column: 1/2;
         grid-row: 1/2;
+    }
+    .cap-text{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .espre {
+        grid-column: 1/2 !important;
+        grid-row: 3/4 !important;
     }
 
     .espre-text{
         grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    .cap{
-        grid-column: 1/2;
         grid-row: 4/5;
     }
-    .cap-text{
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
+
 
     .latte{
         grid-column: 1/2;
@@ -594,14 +610,18 @@ text-align: center;
     }
     .latte-text{
         grid-column: 1/2;
-        grid-row: 5/6;
-    }
+        grid-row: 6/7;
+    } 
 
     #letstalkwrapper{
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
     }
-
+    .formletstalk{
+        width: 80%;
+        margin:10px;
+        margin-bottom:40px;
+    }
     #letstalkimg{
         background-image: none;
     }
@@ -615,7 +635,9 @@ text-align: center;
     }
 
     .form-wrapper{
-        width: 80%;
+        max-width: 100%;
+        margin: 0px;
+        padding-bottom: 20px;
     }
 
 }
