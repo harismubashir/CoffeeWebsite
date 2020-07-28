@@ -100,7 +100,6 @@ function goToTop() {
 }
 
 function appear(e){
-    console.log(e);
     if (window.scrollY > 400) {
         toTopButton.style.display = "block";
     }else{
