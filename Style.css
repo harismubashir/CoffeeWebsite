@@ -571,10 +571,13 @@ text-align: center;
     }
 
     .wrapper-coffeetype{
-        min-width: 800px;
+        display: flex;
+        width: 80%;
+        min-width: 500px;
         flex-direction: column;
         flex-wrap: wrap;
-        display: block;
+        align-content: center;
+      
      
     }
 
